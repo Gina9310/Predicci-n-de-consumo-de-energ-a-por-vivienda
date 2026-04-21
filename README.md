@@ -77,7 +77,7 @@ MAE: 312.8
 Error relativo: 67%
 R²: 0.034
 
-## Conslusión
+## Conclusión
 Dentro del modelo la variable que más influye en el consumo eléctrico por vivienda es la existencia de aire acondicionado, suena lógico y poco influye si se tiene o no refrigerador.
 
 El modelo parece no ser tan útil, pues presenta un error relativo de 67%. Se esplorará que otras caracteristicas pueden ser añadidas para entrenar al modelo y llegar a un eror relativo de 20%-30%.
