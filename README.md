@@ -11,7 +11,7 @@ ingresando número de focos, número de ocupantes, si se cuenta con aire acondic
 - Jupyter Notebook
 - Librerías:
   - pandas
-  - from sklearn
+  - sklearn
 
 ### Objetivo:
 
