@@ -61,7 +61,7 @@ consumo_electricidad
 
 ## Modelo utilizado
 
-1. Regresión lineal
+Regresión lineal
 Modelo base para interpretar relaciones entre variables.
 
 ## Evaluación del modelo
