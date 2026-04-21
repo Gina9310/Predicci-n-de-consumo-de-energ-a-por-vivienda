@@ -13,11 +13,77 @@ ingresando número de focos, número de ocupantes, si se cuenta con aire acondic
   - pandas
   - sklearn
 
-### Objetivo:
+## Objetivo
 
-Crear un modelo que permita predicir el consumo de energía por vivienda (un hogar) considerando caracteristicas de la vivienda como: existencia de refrigerador, número de focos, número de tvs, número de habitantes entre otras.
-### Conclusión 
+Construir un modelo que permita estimar el consumo eléctrico de un hogar en función de variables como:
 
+Número de focos
+Número de ocupantes
+Presencia de aire acondicionado
+Presencia de calefactor
+Presencia de refrigerador
+Número de televisores
+Región geográfica
+
+## Datos
+
+Se utilizaron datos de ENCEVI, los cuales contienen información sobre:
+
+Equipamiento energético del hogar: focos, tvs, aire acondicionado, calentador
+Uso de electrodomésticos: refrigerador
+Consumo de energía
+
+La unidad de análisis utilizada fue vivienda, de acuerdor a los datos por vivienda sólo se registra un hogar.
+
+## Preparación de datos
+
+Se realizaron los siguientes pasos:
+
+
+Agrupación de datos a nivel hogar (folioviv, foliohog)
+Unión de diferentes módulos mediante merge
+Conversión de variables categóricas a numéricas (ej. 1/2 → 1/0)
+Creación de variables dummy para región
+Eliminación de valores negativos y outliers (percentil 99)
+Relleno de valores NaN con 0
+
+## Variables utilizadas
+Variables explicativas (X):
+refrigerador (0/1)
+ocupantes (numérica)
+calefactor (0/1)
+focos (numérica)
+aire_acon (0/1)
+num_tvs (numérica)
+region_2, region_3 (dummies)
+Variable objetivo (y):
+consumo_electricidad
+
+## Modelo utilizado
+
+1. Regresión lineal
+Modelo base para interpretar relaciones entre variables.
+
+## Evaluación del modelo
+
+Se utilizaron las siguientes métricas:
+
+MAE (Mean Absolute Error)
+Error relativo (MAE / promedio)
+R² (coeficiente de determinación)
+Resultados:
+Consumo promedio: 468.4
+MAE: 312.8
+Error relativo: 67%
+R²: 0.034
+
+## Conslusión
 Dentro del modelo la variable que más influye en el consumo eléctrico por vivienda es la existencia de aire acondicionado, suena lógico y poco influye si se tiene o no refrigerador.
 
 El modelo parece no ser tan útil, pues presenta un error relativo de 67%. Se esplorará que otras caracteristicas pueden ser añadidas para entrenar al modelo y llegar a un eror relativo de 20%-30%.
+
+## Trabajo futuro
+Incorporar variables socioeconómicas
+Incluir más electrodomésticos
+Probar modelos más avanzados
+
