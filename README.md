@@ -84,6 +84,8 @@ El modelo parece no ser tan útil, pues presenta un error relativo de 67%. Se es
 
 ## Trabajo futuro
 Incorporar variables socioeconómicas
+
 Incluir más electrodomésticos
+
 Probar modelos más avanzados
 
